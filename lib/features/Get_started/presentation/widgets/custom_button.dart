@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:running_app/core/utils/styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({
+  CustomButton({
+    required this.onPressed,
     super.key,
   });
-
+  void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -14,7 +15,7 @@ class CustomButton extends StatelessWidget {
         height: 56,
         minWidth: 300,
         color: const Color(0xff7b61ff),
-        onPressed: () {},
+        onPressed: onPressed,
         child: const Text(
           "Get Started",
           style: TextStyles.textStyle18,
