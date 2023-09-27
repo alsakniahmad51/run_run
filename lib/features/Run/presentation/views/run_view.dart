@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:running_app/core/utils/constants.dart';
 import 'package:running_app/features/Run/presentation/widgets/run_view_body.dart';
 
@@ -20,7 +21,9 @@ class RunView extends StatelessWidget {
                   splashColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   icon: const Icon(Icons.keyboard_backspace),
-                  onPressed: () {},
+                  onPressed: () {
+                    GoRouter.of(context).pop();
+                  },
                 ),
                 MaterialButton(
                   splashColor: Colors.transparent,
