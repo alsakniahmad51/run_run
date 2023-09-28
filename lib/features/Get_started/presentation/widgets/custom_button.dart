@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:running_app/core/utils/styles.dart';
 
+// ignore: must_be_immutable
 class CustomButton extends StatelessWidget {
   CustomButton({
     required this.onPressed,

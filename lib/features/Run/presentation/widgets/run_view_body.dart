@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:running_app/core/utils/images/background_image.dart';
-import 'package:running_app/core/utils/images/images.dart';
 import 'package:running_app/features/Run/presentation/widgets/run_image.dart';
 import 'package:running_app/features/Run/presentation/widgets/slider_run.dart';
 

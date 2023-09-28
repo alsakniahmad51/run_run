@@ -40,14 +40,15 @@ class OnBoardingPageState extends State<OnBoardingPage> {
     const bodyStyle = TextStyle(
         fontSize: 12.0, color: Color(0xffCDCDCD), fontWeight: FontWeight.w400);
 
-    const pageDecoration = PageDecoration(
-        titleTextStyle: TextStyle(
+    final pageDecoration = PageDecoration(
+        titleTextStyle: const TextStyle(
             fontSize: 21.0, fontWeight: FontWeight.w700, color: Colors.white),
         bodyTextStyle: bodyStyle,
-        bodyPadding: EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 16.0),
-        pageColor: Color(0xff2f3c50),
+        bodyPadding: const EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 16.0),
+        pageColor: const Color(0xff2f3c50),
         imagePadding: EdgeInsets.zero,
-        titlePadding: EdgeInsets.only(top: 303 * 0.158));
+        titlePadding:
+            EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.06));
 
     return ClipRRect(
       borderRadius: BorderRadius.circular(64),
@@ -69,7 +70,8 @@ class OnBoardingPageState extends State<OnBoardingPage> {
           ),
         ),
         globalFooter: Padding(
-          padding: const EdgeInsets.only(bottom: 303 * 0.1716),
+          padding: EdgeInsets.only(
+              bottom: MediaQuery.of(context).size.height * 0.064),
           child: SizedBox(
             width: MediaQuery.of(context).size.width * 0.4 //   150
             ,
