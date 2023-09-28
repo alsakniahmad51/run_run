@@ -16,6 +16,7 @@ class LoginViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 21),
         child: Column(
@@ -34,12 +35,15 @@ class LoginViewBody extends StatelessWidget {
               height: 12,
             ),
             const PasswordField(),
+            const SizedBox(
+              height: 12,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 const CustomCheckBox(),
                 Padding(
-                  padding: const EdgeInsets.only(left: 12),
+                  padding: const EdgeInsets.only(left: 6),
                   child: Text(
                     "Remember Me ",
                     style: Styles.textStyle14.copyWith(color: Colors.white),
@@ -55,13 +59,13 @@ class LoginViewBody extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(
+              height: 24,
+            ),
             CustomButton(
               onPressed: () {},
               textButton: "Log in",
               minWidth: 326,
-            ),
-            const SizedBox(
-              height: 10,
             ),
             const CustomDivider(),
             const SizedBox(
