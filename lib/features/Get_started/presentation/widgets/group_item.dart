@@ -23,13 +23,13 @@ class GroupItems extends StatelessWidget {
             children: [
               const Text(
                 "Running App",
-                style: TextStyles.textStyle30,
+                style: Styles.textStyle30,
               ),
               const Padding(
                 padding: EdgeInsets.only(left: 70, right: 70, top: 12),
                 child: Text(
                   "Run and earn with our app.Some\n text Example will be her",
-                  style: TextStyles.textStyle14,
+                  style: Styles.textStyle14,
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -37,6 +37,7 @@ class GroupItems extends StatelessWidget {
                 height: 40,
               ),
               CustomButton(
+                textButton: "Get Started",
                 onPressed: () {
                   GoRouter.of(context).push(AppRouter.kRunview);
                 },

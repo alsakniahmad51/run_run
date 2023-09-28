@@ -12,7 +12,7 @@ class LoginText extends StatelessWidget {
       padding: EdgeInsets.only(top: 88),
       child: Text(
         "Log in",
-        style: TextStyles.textStyle21,
+        style: Styles.textStyle21,
         textAlign: TextAlign.center,
       ),
     );

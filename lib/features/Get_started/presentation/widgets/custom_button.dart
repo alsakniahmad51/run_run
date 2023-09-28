@@ -3,23 +3,27 @@ import 'package:running_app/core/utils/styles.dart';
 
 // ignore: must_be_immutable
 class CustomButton extends StatelessWidget {
-  CustomButton({
+  const CustomButton({
+    this.minWidth = 300,
     required this.onPressed,
     super.key,
+    required this.textButton,
   });
-  void Function()? onPressed;
+  final void Function()? onPressed;
+  final double? minWidth;
+  final String textButton;
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(12),
       child: MaterialButton(
         height: 56,
-        minWidth: 300,
+        minWidth: minWidth,
         color: const Color(0xff7b61ff),
         onPressed: onPressed,
-        child: const Text(
-          "Get Started",
-          style: TextStyles.textStyle18,
+        child: Text(
+          textButton,
+          style: Styles.textStyle18,
         ),
       ),
     );

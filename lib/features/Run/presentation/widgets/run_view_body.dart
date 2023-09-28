@@ -22,7 +22,7 @@ class RunViewBody extends StatelessWidget {
           children: [
             Text(
               "Alredy have an account ?",
-              style: TextStyles.textStyle14.copyWith(color: Colors.white),
+              style: Styles.textStyle14.copyWith(color: Colors.white),
             ),
             GestureDetector(
               onTap: () {
@@ -30,8 +30,8 @@ class RunViewBody extends StatelessWidget {
               },
               child: Text(
                 " Sign in",
-                style: TextStyles.textStyle14
-                    .copyWith(color: const Color(0xff715be7)),
+                style:
+                    Styles.textStyle14.copyWith(color: const Color(0xff715be7)),
               ),
             ),
           ],
