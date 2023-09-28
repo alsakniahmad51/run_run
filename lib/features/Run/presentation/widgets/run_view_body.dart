@@ -1,15 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:running_app/core/utils/router.dart';
+import 'package:running_app/core/utils/styles.dart';
 import 'package:running_app/features/Run/presentation/widgets/run_image.dart';
-import 'package:running_app/features/Run/presentation/widgets/slider_run.dart';
 
 class RunViewBody extends StatelessWidget {
   const RunViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.start,
-      children: [RunImage(), SliderRun()],
+      children: [
+        const RunImage(),
+        // const SliderRun(),
+        const SizedBox(
+          height: 34,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Alredy have an account ?",
+              style: TextStyles.textStyle14.copyWith(color: Colors.white),
+            ),
+            GestureDetector(
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.ksigninView);
+              },
+              child: Text(
+                " Sign in",
+                style: TextStyles.textStyle14
+                    .copyWith(color: const Color(0xff715be7)),
+              ),
+            ),
+          ],
+        )
+      ],
     );
   }
 }

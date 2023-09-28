@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:running_app/core/utils/constants.dart';
+import 'package:running_app/core/utils/router.dart';
 import 'package:running_app/features/Run/presentation/widgets/run_view_body.dart';
 
 class RunView extends StatelessWidget {
@@ -28,8 +29,14 @@ class RunView extends StatelessWidget {
                 MaterialButton(
                   splashColor: Colors.transparent,
                   highlightColor: Colors.transparent,
-                  onPressed: () {},
-                  child: const Text("Skip"),
+                  onPressed: () {
+                    GoRouter.of(context).replace(AppRouter.kLoginView);
+                  },
+                  child: GestureDetector(
+                      onTap: () {
+                        GoRouter.of(context).push(AppRouter.kLoginView);
+                      },
+                      child: const Text("Skip")),
                 ),
               ],
             ),

@@ -10,4 +10,6 @@ class TextStyles {
       fontSize: 14);
   static const textStyle18 = TextStyle(
       fontWeight: FontWeight.bold, fontFamily: "quiqsand", fontSize: 18);
+  static const textStyle21 = TextStyle(
+      fontWeight: FontWeight.bold, fontFamily: "quiqsand", fontSize: 21);
 }

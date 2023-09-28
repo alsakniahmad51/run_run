@@ -15,11 +15,11 @@ class OnBoardingPage extends StatefulWidget {
 class OnBoardingPageState extends State<OnBoardingPage> {
   final introKey = GlobalKey<IntroductionScreenState>();
 
-  void _onIntroEnd(context) {
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => const MyWidgetaaa()),
-    );
-  }
+  // void _onIntroEnd(context) {
+  //   Navigator.of(context).push(
+  //     MaterialPageRoute(builder: (_) => const MyWidgetaaa()),
+  //   );
+  // }
 
   Widget buildFullscreenImage() {
     return SvgPicture.asset(
@@ -182,8 +182,10 @@ class OnBoardingPageState extends State<OnBoardingPage> {
           //   reverse: true,
           // ),
         ],
-        onDone: () => _onIntroEnd(context),
-        onSkip: () => _onIntroEnd(context), // You can override onSkip callback
+        // ignore: avoid_print
+        onDone: () => print("fwfwf"),
+        // ignore: avoid_print
+        onSkip: () => print("fwfwf"), // You can override onSkip callback
         showSkipButton: false,
         showDoneButton: false,
         showNextButton: false,
